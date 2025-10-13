@@ -38,3 +38,83 @@
   seed: 12345
   tensorboard: False
   train: True
+==> torch version: 2.0.1+cu117
+==> cudnn version: 8500
+==> Cmd:
+['main.py', '--name', 'stocks', '--config_file', '/home/shihongyue/Diffusion-TS/Config/stocks.yaml', '--gpu', '0', '--train']
+==> args:
+  config_file: /home/shihongyue/Diffusion-TS/Config/stocks.yaml
+  cudnn_deterministic: False
+  gpu: 0
+  milestone: 10
+  missing_ratio: 0.0
+  mode: infill
+  name: stocks
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 0
+  save_dir: OUTPUT/stocks
+  seed: 12345
+  tensorboard: False
+  train: True
+==> torch version: 2.0.1+cu117
+==> cudnn version: 8500
+==> Cmd:
+['main.py', '--name', 'stocks', '--config_file', '/home/shihongyue/Diffusion-TS/Config/stocks.yaml', '--gpu', '0', '--sample', '1', '--milestone', '10', '--mode', 'predict', '--pred_len', '30']
+==> args:
+  config_file: /home/shihongyue/Diffusion-TS/Config/stocks.yaml
+  cudnn_deterministic: False
+  gpu: 0
+  milestone: 10
+  missing_ratio: 0.0
+  mode: predict
+  name: stocks
+  opts: []
+  output: OUTPUT
+  pred_len: 30
+  sample: 1
+  save_dir: OUTPUT/stocks
+  seed: 12345
+  tensorboard: False
+  train: False
+==> torch version: 2.0.1+cu117
+==> cudnn version: 8500
+==> Cmd:
+['main.py', '--name', 'stocks', '--config_file', '/home/shihongyue/Diffusion-TS/Config/stocks.yaml', '--gpu', '0', '--sample', '1', '--milestone', '10', '--mode', 'predict', '--pred_len', '30']
+==> args:
+  config_file: /home/shihongyue/Diffusion-TS/Config/stocks.yaml
+  cudnn_deterministic: False
+  gpu: 0
+  milestone: 10
+  missing_ratio: 0.0
+  mode: predict
+  name: stocks
+  opts: []
+  output: OUTPUT
+  pred_len: 30
+  sample: 1
+  save_dir: OUTPUT/stocks
+  seed: 12345
+  tensorboard: False
+  train: False
+==> torch version: 2.0.1+cu117
+==> cudnn version: 8500
+==> Cmd:
+['main.py', '--name', 'stocks', '--config_file', '/home/shihongyue/Diffusion-TS/Config/stocks.yaml', '--gpu', '0', '--train']
+==> args:
+  config_file: /home/shihongyue/Diffusion-TS/Config/stocks.yaml
+  cudnn_deterministic: False
+  gpu: 0
+  milestone: 10
+  missing_ratio: 0.0
+  mode: infill
+  name: stocks
+  opts: []
+  output: OUTPUT
+  pred_len: 0
+  sample: 0
+  save_dir: OUTPUT/stocks
+  seed: 12345
+  tensorboard: False
+  train: True
