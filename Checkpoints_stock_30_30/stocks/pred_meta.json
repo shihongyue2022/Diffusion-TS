@@ -1,0 +1,28 @@
+{
+  "name": "stocks",
+  "mode": "predict",
+  "var_num": 97,
+  "window": 30,
+  "raw_shape": [
+    122,
+    30,
+    97
+  ],
+  "files": {
+    "raw": "/home/shihongyue/Diffusion-TS/Checkpoints_stock_30_30/stocks/pred_raw.npy",
+    "ast": "/home/shihongyue/Diffusion-TS/Checkpoints_stock_30_30/stocks/pred_ast.npy",
+    "auto": "/home/shihongyue/Diffusion-TS/Checkpoints_stock_30_30/stocks/pred_auto.npy"
+  },
+  "ast_shape": [
+    97,
+    122,
+    30
+  ],
+  "S_inferred": 122,
+  "auto_shape": [
+    122,
+    30,
+    97
+  ],
+  "picked": "ast"
+}
