@@ -1,8 +1,8 @@
 model:
   target: Models.interpretable_diffusion.gaussian_diffusion.Diffusion_TS
   params:
-    seq_length: 24
-    feature_size: 6
+    seq_length: 30            # ← 与预测窗口一致
+    feature_size: 97          # ← 与 stock_data.csv 列数一致
     n_layer_enc: 2
     n_layer_dec: 2
     d_model: 64  # 4 X 16
@@ -45,8 +45,8 @@ dataloader:
     params:
       name: stock
       proportion: 1.0  # Set to rate < 1 if training conditional generation
-      data_root: ./Data/datasets/stock_data.csv
-      window: 24  # seq_length
+      data_root: /home/shihongyue/Diffusion-TS/Data/datasets/stock_data.csv  # ← 绝对路径更稳
+      window: 30        # ← 与 seq_length 对齐
       save2npy: True
       neg_one_to_one: True
       seed: 123
@@ -57,8 +57,8 @@ dataloader:
     params:
       name: stock
       proportion: 0.9  # rate
-      data_root: ./Data/datasets/stock_data.csv
-      window: 24  # seq_length
+      data_root: /home/shihongyue/Diffusion-TS/Data/datasets/stock_data.csv  # ← 同上
+      window: 30        # ← 与 seq_length 对齐
       save2npy: True
       neg_one_to_one: True
       seed: 123
@@ -70,5 +70,5 @@ dataloader:
     sampling_steps: 200
 
   batch_size: 64
-  sample_size: 256
+  sample_size: 64          # ← 与 --num_samples 64 对齐
   shuffle: True
