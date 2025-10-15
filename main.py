@@ -5,6 +5,7 @@ import os
 import json
 import argparse
 import itertools
+from pathlib import Path
 from typing import Tuple, Optional
 
 import numpy as np
@@ -204,9 +205,13 @@ def main():
 
     # 决定输出目录：优先 --output，否则用 solver.results_folder
     results_folder = (config.get('solver', {}) or {}).get('results_folder', './Checkpoints_stock')
-    base_out = args.output if (args.output not in [None, '']) else results_folder
-    # 与权重保持一致：<base>/<name> 结构
-    args.save_dir = os.path.join(base_out, f'{args.name}')
+    base_out_str = args.output if (args.output not in [None, '']) else results_folder
+    base_out_path = Path(base_out_str)
+    if base_out_path.name == args.name:
+        target_dir = base_out_path
+    else:
+        target_dir = base_out_path / args.name
+    args.save_dir = str(target_dir)
     _ensure_dir(args.save_dir)
 
     # 日志器

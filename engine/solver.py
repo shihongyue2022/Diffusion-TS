@@ -36,7 +36,14 @@ class Trainer(object):
         self.args, self.config = args, config
         self.logger = logger
 
-        self.results_folder = Path(config['solver']['results_folder'] + f'_{model.seq_length}')
+        save_dir_override = getattr(args, 'save_dir', None)
+        if save_dir_override:
+            self.results_folder = Path(save_dir_override)
+        else:
+            base_folder = Path(config['solver']['results_folder'])
+            if config['solver'].get('append_seq_length', True):
+                base_folder = Path(f'{base_folder}_{model.seq_length}')
+            self.results_folder = base_folder
         os.makedirs(self.results_folder, exist_ok=True)
 
         start_lr = config['solver'].get('base_lr', 1.0e-4)

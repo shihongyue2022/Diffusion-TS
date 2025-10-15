@@ -2,7 +2,7 @@ model:
   target: Models.interpretable_diffusion.gaussian_diffusion.Diffusion_TS
   params:
     seq_length: 30          # 与预测窗口一致
-    feature_size: 97        # 等于 stock_data.csv 的列数(资产数)
+    feature_size: 98        # 等于 stock_data.csv 的列数(资产数)
     n_layer_enc: 2
     n_layer_dec: 2
     d_model: 64
@@ -45,10 +45,10 @@ dataloader:
     params:
       name: stock
       proportion: 1.0
-      data_root: /home/shihongyue/Diffusion-TS/Data/datasets/stock_data.csv  # 绝对路径更稳
+      data_root: /home/shihongyue/unconditional-time-series-diffusion/external/Diffusion-TS/Data/stocks/train.csv  # 绝对路径更稳
       window: 30              # 与 seq_length 对齐
       save2npy: True
-      neg_one_to_one: True
+      neg_one_to_one: False
       seed: 123
       period: train
 
@@ -57,10 +57,10 @@ dataloader:
     params:
       name: stock
       proportion: 0.9
-      data_root: /home/shihongyue/Diffusion-TS/Data/datasets/stock_data.csv
+      data_root: /home/shihongyue/unconditional-time-series-diffusion/external/Diffusion-TS/Data/stocks/test.csv
       window: 30              # 与 seq_length 对齐
       save2npy: True
-      neg_one_to_one: True
+      neg_one_to_one: False
       seed: 123
       period: test
       style: separate
