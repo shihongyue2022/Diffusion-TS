@@ -1,0 +1,28 @@
+{
+  "name": "stocks",
+  "mode": "predict",
+  "var_num": 98,
+  "window": 30,
+  "raw_shape": [
+    22,
+    30,
+    98
+  ],
+  "files": {
+    "raw": "/home/shihongyue/unconditional-time-series-diffusion/external/Diffusion-TS/Checkpoints_stock_30/stocks/pred_raw.npy",
+    "ast": "/home/shihongyue/unconditional-time-series-diffusion/external/Diffusion-TS/Checkpoints_stock_30/stocks/pred_ast.npy",
+    "auto": "/home/shihongyue/unconditional-time-series-diffusion/external/Diffusion-TS/Checkpoints_stock_30/stocks/pred_auto.npy"
+  },
+  "ast_shape": [
+    98,
+    22,
+    30
+  ],
+  "S_inferred": 22,
+  "auto_shape": [
+    22,
+    30,
+    98
+  ],
+  "picked": "ast"
+}

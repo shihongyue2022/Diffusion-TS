@@ -19,7 +19,7 @@ model:
 
 solver:
   base_lr: 1.0e-5
-  max_epochs: 10000
+  max_epochs: 5000
   results_folder: ./Checkpoints_stock_30   # 与你实际 ckpt 目录保持一致
   gradient_accumulate_every: 2
   save_cycle: 1000
@@ -45,7 +45,7 @@ dataloader:
     params:
       name: stock
       proportion: 1.0
-      data_root: /home/shihongyue/unconditional-time-series-diffusion/external/Diffusion-TS/Data/stocks/train.csv  # 绝对路径更稳
+      data_root: /home/shihongyue/unconditional-time-series-diffusion/bin/Diffusion-TS/data/nasdaq100_pctret/train.csv  # 绝对路径更稳
       window: 30              # 与 seq_length 对齐
       save2npy: True
       neg_one_to_one: False
@@ -57,7 +57,7 @@ dataloader:
     params:
       name: stock
       proportion: 0.9
-      data_root: /home/shihongyue/unconditional-time-series-diffusion/external/Diffusion-TS/Data/stocks/test.csv
+      data_root: /home/shihongyue/unconditional-time-series-diffusion/bin/Diffusion-TS/data/nasdaq100_pctret/test.csv
       window: 30              # 与 seq_length 对齐
       save2npy: True
       neg_one_to_one: False

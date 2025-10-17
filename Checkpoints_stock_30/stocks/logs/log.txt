@@ -1,0 +1,6 @@
+2025-10-17-07-19: {'overall': {'trainable': '376.33K', 'non_trainable': '0', 'total': '376.33K'}, 'model': {'trainable': '376.33K', 'non_trainable': '0', 'total': '376.33K'}}
+2025-10-17-07-19: stocks: start training...
+2025-10-17-07-23: Training done, time: 216.08
+2025-10-17-11-16: {'overall': {'trainable': '376.33K', 'non_trainable': '0', 'total': '376.33K'}, 'model': {'trainable': '376.33K', 'non_trainable': '0', 'total': '376.33K'}}
+2025-10-17-11-16: Begin to restore...
+2025-10-17-11-16: Imputation done, time: 10.13
